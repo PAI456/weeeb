@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4A90E2, #D9E3E0);
+            color: #333;
+            transition: background 0.5s ease;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #2C3E50;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #E74C3C;
+            border-bottom: 3px solid #E74C3C;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        .map {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 20px auto;
+            background-color: #E74C3C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .button:hover {
+            background-color: #C0392B;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            color: #bbb;
+            font-size: 1em;
+        }
+        footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ubicación</h1>
+    </header>
+
+    <section>
+        <h2>Encuéntranos</h2>
+        <p>
+            Estamos ubicados en el corazón de <strong>Dulce Nombre De Culmi, Olancho</strong>, un lugar ideal para <strong>Que encuentres todo tipo de electrodomésticos para tu hogar </strong>. Nuestra dirección es:
+        </p>
+        <p>
+            <strong>Comercial Guzman</strong><br>
+            D.N de culmi Olancho<br>
+          Ramon Rosa<br>
+            Honduras
+        </p>
+    </section>
+
+    <section>
+        <h2>Cómo llegar</h2>
+        <h3>En coche:</h3>
+        <p>
+             <strong>estamos ubicados a la 5 calle 8 avenida del centro de CULMI</strong> </p>
+
+        
+    </section>
+
+    <section>
+        <h2>Horarios</h2>
+        <p>
+            Estamos abiertos de <strong>8:00 AM</strong> a <strong>5:00 PM</strong>, de <strong>Lunes a sabado</strong>.
+        </p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contáctanos</h2>
+        <p>
+            Si necesitas más información, no dudes en llamarnos al <strong>504 8883-4642</strong> o escribirnos a <strong>Comercialguzman@gmail</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Ubicación en el Mapa</h2>
+        <iframe class="map" src="90.png" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <a href="INDEX.HTML" class="button">Volver a Inicio</a>
+
+    <footer>
+        <p>&copy; 2024 [Nombre de tu negocio]. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

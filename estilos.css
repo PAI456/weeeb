@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+    background-color: #0d0d0d; /* Negro intenso */
+    padding: 20px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1b1b1b; /* Gris oscuro para más contraste */
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #00ffcc; /* Neón verde/azul brillante */
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 20px;
+}
+
+.menu ul li a {
+    color: #ffffff;
+}
+
+.menu a {
+    color: #00ffcc; /* Color de texto neón */
+}
+
+/* 1. Animación de fondo gradiente fluido */
+body {
+    background-image: url('fondo3.png'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background: linear-gradient(270deg, #1a6b2c, #00ffcc, #ff00ff);
+    background-size: 600% 600%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con transparencia */
+    margin-top: 10px;
+    border-radius: 10px;
+    flex: 35%;
+}
+
+aside {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con transparencia */
+    margin-top: 10px;
+    border-radius: 10px;
+    flex: 30%;
+}
+
+/* 2. Efecto hover con transición suave en los enlaces */
+.menu li a:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+section p {
+    margin: 10px;
+    padding: 5px;
+    background: linear-gradient(45deg,  #211919, #4b985f, #1a6b2c,#00f84e); /* Degradado neón vibrante */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7), 0 0 20px rgba(255, 0, 255, 0.7); /* Sombra neón */
+    border-radius: 5px;
+}
+
+aside p {
+    margin: 10px;
+    padding: 5px;
+    background: linear-gradient(45deg, #080606, #4b985f, #1a6b2c,#00f84e); /* Degradado neón vibrante */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7), 0 0 20px rgba(255, 0, 255, 0.7); /* Sombra neón */
+    border-radius: 5px;
+}
+
+aside {
+    margin-left: 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con transparencia */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex: 100%;
+}
+
+/* 3. Texto con efecto "glitch" futurista */
+h1, h2, h3, h4 {
+    color: #00ffcc;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffcc;
+    position: relative;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { clip: rect(24px, 9999px, 67px, 0); }
+    20% { clip: rect(0px, 9999px, 47px, 0); }
+    40% { clip: rect(12px, 9999px, 52px, 0); }
+    60% { clip: rect(30px, 9999px, 67px, 0); }
+    80% { clip: rect(10px, 9999px, 40px, 0); }
+    100% { clip: rect(20px, 9999px, 70px, 0); }
+}
+
+/* 4. Efecto de parpadeo en botones */
+button {
+    background-color: #00ffcc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+    border-radius: 5px;
+    animation: blinkButton 2s infinite;
+}
+
+@keyframes blinkButton {
+    0%, 100% { box-shadow: 0 0 10px #00ffcc; }
+    50% { box-shadow: 0 0 20px #00ffcc; }
+}
+
+/* 5. Animación en el header */
+header {
+    border-radius: 10px;
+    background: linear-gradient(45deg, #fff8f8, #4b985f, #1a6b2c,#00f84e); /* Degradado neón */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(255, 0, 255, 0.8); /* Sombra con efecto neón */
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 15px rgba(255, 0, 255, 0.8); /* Sombra neón en el texto */
+    animation: headerPulse 3s infinite;
+}
+
+@keyframes headerPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* 6. Animación para la sombra del texto */
+p {
+    animation: shadowPulse 2s ease-in-out infinite;
+}
+
+@keyframes shadowPulse {
+    0% { text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); }
+    50% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.8); }
+    100% { text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); }
+}
+
+/* 7. Efecto 3D para el texto en los párrafos */
+p {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* 8. Efecto de iluminación suave en los bordes de las secciones */
+section, aside, footer {
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+/* 9. Animación de "rebote" en los botones */
+button:hover {
+    animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 10. Efecto de desenfoque en imágenes al hacer hover */
+img:hover {
+    filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+img {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+img:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 255, 204, 0.8);
+    transition: all 0.5s ease;
+}
+
+img:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 0, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
+button {
+    position: relative;
+    border: none;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #fff;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent, #00ffcc, transparent);
+    animation: spinParticles 3s linear infinite;
+}
+
+@keyframes spinParticles {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+section{
+
+    margin-top: 100px;
+}
+
+footer p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    color: #ffffff;
+
+}
